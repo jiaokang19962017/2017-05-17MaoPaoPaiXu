@@ -17,19 +17,20 @@ namespace ConsoleApplication2
 
             //   Console.WriteLine("yellow={0}",(int)color.yellow);
             int flag = Convert.ToInt32(Console.ReadLine());
-            switch (flag)
+            Season season = (Season)flag;//将数值类型转化为枚举类型
+            switch (season)
             {
-                case 0:
-                    Console.WriteLine((int)Season.spring);
+                case Season.spring:
+                    Console.WriteLine("春天");
                     break;
-                case 1:
-                    Console.WriteLine((int)Season.summer);
+                case Season.summer:
+                    Console.WriteLine("夏天");
                     break;
-                case 2:
-                    Console.WriteLine((int)Season.autume);
+                case Season.autume:
+                    Console.WriteLine("秋天");
                     break;
-                case 3:
-                    Console.WriteLine((int)Season.winter);
+                case Season.winter:
+                    Console.WriteLine("冬天");
                     break;
             }
         }
