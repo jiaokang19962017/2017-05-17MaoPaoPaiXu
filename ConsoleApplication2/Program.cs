@@ -16,7 +16,7 @@ namespace ConsoleApplication2
             // enum Weekday { Sun,Mon,Tue,Wed,Thu,Fri,Sat};
 
             //   Console.WriteLine("yellow={0}",(int)color.yellow);
-            int flag = Convert.ToInt32(Console.ReadLine());
+          /*  int flag = Convert.ToInt32(Console.ReadLine());
             Season season = (Season)flag;//将数值类型转化为枚举类型
             switch (season)
             {
@@ -32,7 +32,21 @@ namespace ConsoleApplication2
                 case Season.winter:
                     Console.WriteLine("冬天");
                     break;
+            }*/
+
+            //将枚举的所有名称遍历出来
+            foreach (string item in Enum.GetNames(typeof(Season)))
+            {
+                Console.WriteLine(item);
             }
+
+
+            //将整个枚举的整数值遍历出来
+            foreach (int item in Enum.GetValues(typeof(Season)))
+            {
+                Console.WriteLine(item);
+            }
+
         }
     }
 }
